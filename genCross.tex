@@ -1,0 +1,94 @@
+\documentclass[12pt,twoside]{article}
+\usepackage{amsfonts,amsmath,amssymb,amsthm,color,arydshln}
+\usepackage{epsfig}
+\textheight=19.9cm \textwidth=14.8cm \topmargin=0.5cm
+\oddsidemargin=1cm \evensidemargin=1cm
+
+\everymath{\displaystyle}
+\def\l{\left}
+\def\r{\right}
+\def\theequation{\arabic{section}.\arabic{equation}}
+\newcommand{\bb}[1]{\begin{equation}\label{#1}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bbb}{\begin{eqnarray}}
+\newcommand{\eee}{\end{eqnarray}}
+\newcommand{\bbbb}{\begin{eqnarray*}}
+\newcommand{\eeee}{\end{eqnarray*}}
+\newcommand{\nnn}{\nonumber}
+\newcommand{\no}{\noindent}
+\newcommand{\tT}{\intercal}
+\def\TT{\mathbb{T}}
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\DD{{\cal D}}
+\def\OO{{\cal{O}}}
+\def\R#1{$(\ref{#1})$}
+\def\dia{\mbox{diamond-$\alpha$}}
+\def\diast{{\diamondsuit_{\alpha}}}
+\definecolor{green1}{rgb}{0.1,0.5,0.0}
+\definecolor{blue1}{RGB}{51,78,125}
+\definecolor{brown}{RGB}{220,90,49}
+\definecolor{red1}{rgb}{0.8,0.1,0.0}
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{gray2}{rgb}{0.8,0.8,0.8}
+\newcommand{\darkgreen}{\color{green1}}
+\newcommand{\darkblue}{\color{blue1}}
+\newcommand{\darkred}{\color{red1}}
+\newcommand{\orange}{\color{orange}}
+\newcommand{\blue}{\color{blue}}
+\newcommand{\gray}{\color{gray2}}
+\newcommand{\red}{\color{red}}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Propoision}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{remark}[Theorem]{Remark}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+ 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % definition numbers are dependent on theorem numbers
+
+
+\begin{document}
+\begin{center}
+{\Large\bf HW 10}
+\end{center}
+{\large\bf Chong Sun}
+\begin{itemize}
+\item (d) The linear discriminant scores of the point $x_0 = [3.5 ~~1.75]'$ for groups Iris setosa, Iris versicolor and Iris virginica are given respectively by
+\bbbb
+d_1 &=& 51.56,\\
+d_2 &=& 23.77,\\
+d_3 &=& -1.12.
+\eeee
+Thus we classify the point into group Iris setosa.
+
+\item (f) We have the APER$=0.047. $
+
+To find out the $\hat{E}(\text{AER}),$ we use stratified 10-fold classification method described as follows.
+\begin{itemize}
+\item Radomly partitioned the original data set into 10 equal sized subsamples.
+\item Of the 10 subsamples, a single subsample is retained as the validation data for testing the model, and the remaining 9 subsamples are used as training data.
+\item The above process is then repeated 10 times (the folds), with each of the 10 subsamples used exactly once as the validation data.
+\item The 10 results from the folds can then be averaged to produce a single estimation.
+\item  We then repeat the above cross-validation procedure 100 times, yielding 100 random partitions of the original sample. The 100 results are again averaged to produce the final estimate of error rate.
+\end{itemize}
+
+We have $\hat{E}(\text{AER})=0.053$ as our final result.
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
